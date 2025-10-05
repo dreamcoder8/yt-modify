@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube 5 Column Layout",
+  "version": "1.0",
+  "description": "Force YouTube to display 5 columns instead of 3 on chrome.",
+  "permissions": ["scripting", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
